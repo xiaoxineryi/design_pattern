@@ -6,8 +6,8 @@ import com.kaito.MenuFactory.MenuKind;
 import java.util.Scanner;
 
 public class MainMenu  extends Menu{
-    public MainMenu(Game game){
-        super(game,MenuKind.MAIN_MENU);
+    public MainMenu(){
+        super(MenuKind.MAIN_MENU);
         this.mainMenu = this;
     }
     Scanner scanner = new Scanner(System.in);

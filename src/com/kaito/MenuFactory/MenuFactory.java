@@ -5,18 +5,18 @@ import com.kaito.Menu.*;
 import com.sun.tools.javac.Main;
 
 public class MenuFactory {
-    static public Menu createMenu(Game game,Menu preMenu,MainMenu mainMenu,MenuKind menuKind){
+    static public Menu createMenu(Menu preMenu,MainMenu mainMenu,MenuKind menuKind){
         switch (menuKind){
             case MAIN_MENU:
-                return new MainMenu(game);
+                return new MainMenu();
             case HARD_MENU:
-                return new HardMenu(game,preMenu,mainMenu);
+                return new HardMenu(preMenu,mainMenu);
             case PLAYER_CHOICE:
-                return new PlayerMenu(game,preMenu,mainMenu);
+                return new PlayerMenu(preMenu,mainMenu);
             case STYLE_CHOICE:
-                return new StyleMenu(game,preMenu,mainMenu);
+                return new StyleMenu(preMenu,mainMenu);
             case HARD_CHOICE:
-                return new HardChoiceMenu(game,preMenu,mainMenu);
+                return new HardChoiceMenu(preMenu,mainMenu);
             default:
                 return null;
         }

@@ -4,8 +4,8 @@ import com.kaito.Game.Game;
 import com.kaito.MenuFactory.MenuKind;
 
 public class StyleMenu extends SubMenu {
-    public StyleMenu(Game game,Menu preMenu, MainMenu mainMenu) {
-        super(game, MenuKind.STYLE_CHOICE, preMenu, mainMenu);
+    public StyleMenu(Menu preMenu, MainMenu mainMenu) {
+        super(MenuKind.STYLE_CHOICE, preMenu, mainMenu);
     }
 
     @Override

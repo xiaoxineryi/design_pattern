@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class PlayerMenu extends SubMenu {
 
-    public PlayerMenu(Game game,Menu preMenu, MainMenu mainMenu) {
-        super(game, MenuKind.PLAYER_CHOICE, preMenu, mainMenu);
+    public PlayerMenu(Menu preMenu, MainMenu mainMenu) {
+        super(MenuKind.PLAYER_CHOICE, preMenu, mainMenu);
     }
     Scanner scanner = new Scanner(System.in);
     @Override

@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class HardChoiceMenu extends SubMenu {
 
-    public HardChoiceMenu(Game game,  Menu preMenu, MainMenu mainMenu) {
-        super(game, MenuKind.HARD_CHOICE, preMenu, mainMenu);
+    public HardChoiceMenu(Menu preMenu, MainMenu mainMenu) {
+        super(MenuKind.HARD_CHOICE, preMenu, mainMenu);
     }
     Scanner scanner = new Scanner(System.in);
     @Override

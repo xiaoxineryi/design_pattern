@@ -22,8 +22,15 @@ public class Game {
     Integer weight = 1024;
     Integer height = 768;
     List<PLayer> players;
-    public Game(){
-        menu = new MainMenu(this);
+
+    private static class SingletonGame{
+        private static final Game INSTANCE = new Game();
+    }
+    public static final Game getGameInstance(){
+        return SingletonGame.INSTANCE;
+    }
+    private Game(){
+        menu = new MainMenu();
         myMaps = new ArrayList<>();
         players = new ArrayList<>();
     }

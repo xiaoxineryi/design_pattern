@@ -16,8 +16,8 @@ abstract public class Menu {
     MainMenu mainMenu;
     MenuKind menuKind;
     List<Menu> subMenus = new ArrayList<>();
-    public Menu(Game game,MenuKind menuKind) {
-        this.game = game;
+    public Menu(MenuKind menuKind) {
+        this.game = Game.getGameInstance();
         this.menuKind = menuKind;
     }
 
@@ -32,7 +32,7 @@ abstract public class Menu {
                 return menu;
             }
         }
-        Menu m = MenuFactory.createMenu(game,this,mainMenu,menuKind);
+        Menu m = MenuFactory.createMenu(this,mainMenu,menuKind);
         subMenus.add(m);
         return m;
     }

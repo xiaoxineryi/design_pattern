@@ -8,8 +8,8 @@ import com.kaito.MenuFactory.MenuKind;
 import java.util.Scanner;
 
 public class HardMenu extends SubMenu {
-    public HardMenu(Game game, Menu preMenu,MainMenu mainMenu){
-        super(game, MenuKind.HARD_MENU,preMenu,mainMenu);
+    public HardMenu(Menu preMenu,MainMenu mainMenu){
+        super(MenuKind.HARD_MENU,preMenu,mainMenu);
     }
     Scanner scanner = new Scanner(System.in);
     @Override
@@ -26,7 +26,7 @@ public class HardMenu extends SubMenu {
     void choose(String s) {
         switch (s){
             case "1":
-                Menu m = MenuFactory.createMenu(game,this,mainMenu,MenuKind.HARD_CHOICE);
+                Menu m = MenuFactory.createMenu(this,mainMenu,MenuKind.HARD_CHOICE);
                 m.display();
                 return ;
             case "2":
